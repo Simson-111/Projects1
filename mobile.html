@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Marks</title>
+	<style>
+		body
+		{
+			background-color: #6A89A7;
+		}
+		@font-face
+		{
+			font-family:'Leaf';
+			src: url(Leafy-Regular.ttf);
+		}
+		@font-face
+		{
+			font-family:'Aurora';
+			src: url('Aurora.otf');
+		}
+		@media(max-width:768px)
+		{
+
+			#div5
+			{
+				padding: 5px 20px;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+			#div5 input
+			{
+				width: 170px;
+			}
+			.t2
+			{
+				display: block;
+			}
+			#div4
+			{
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				height: auto;
+				width: auto;
+
+			}
+        .button {
+        width: 80%;
+        max-width: 250px;
+    }
+		}
+		body
+		{   
+			min-height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+		}
+		#div1
+		{ 
+			
+			border-radius: 25px;
+			height: auto;
+			width: auto;
+			max-width: 800px;
+			background-color:#88BDF2;
+			padding-bottom: 15px;
+		}	
+
+		.e2
+		{
+			font-size: 18px;
+		}
+		#div2
+		{
+
+			border-radius: 20px;
+			font-size: 18px;
+			margin: 5px 14px;
+			background-color: #BDDDFC;
+			text-align: center;
+		}
+		#h1
+		{
+             
+			color: white;
+			border-radius: 25px;
+			text-align: center;
+			border-radius: 25px;
+			font-size: 30px;
+			background-color:#88BDF2;
+		}
+        #div4
+        {
+        	padding-bottom: 10px;
+        }		
+
+		#div5,#div4 
+		{
+			margin: 0 14px 7px;
+			border-radius: 15px;
+			text-align: center;
+			padding-top: 10px;
+			font-size: 18px;
+			background-color:#BDDDFC ;	
+		}
+		.e1
+		{
+			padding: 5px;
+		}
+		.e2
+		{
+			padding: 10px;
+		}
+		.t1
+		{
+			height: 20px;
+			border: solid skyblue;
+			border-radius: 8px;
+			font-size: 18px;
+			line-height: 50px;
+			width: 150px;
+			animation-name:appear;
+			animation-delay: 0.5;
+			animation-duration: 1.5;
+		}
+		.t2
+		{
+			font-size: 18px;
+			font-weight: bold;
+		}
+		.t3
+		{
+			margin-top: 4px;
+			font-size: 18px;
+			font-weight: bold;
+		}
+		.button{
+
+			color: white;
+			font-size: 25px;
+			padding: 4px 20px;
+			width: 150px;
+			display: inline;
+			border-radius: 15px;
+			background:#88BDF2;
+			border: 3px solid ;
+			box-shadow: 0 7px white;
+		}
+		.button:hover{
+			color: white;
+			background-color:#88BDF2;
+			border: 3px solid white ;
+		}
+		.button:active{
+			transform: translateY(7px);
+			box-shadow: 0 2px white;		
+			background:#6A89A7;
+			color: white;
+		}
+		.te1
+		{
+			height: 20px;
+			border: solid skyblue;
+			border-radius: 8px;
+		}
+		h1
+		{   
+			margin: 0;
+			padding-bottom: 10px;
+			font-size: 80px;
+			font-family:"Leaf";
+			color: white;
+			animation-name: appear;
+			animation-duration: 1.5s;		
+		}
+		.buttons
+		{
+			gap: 20px;
+			flex-wrap: wrap;
+			display: flex;
+			justify-content: space-evenly;
+		}
+
+		@keyframes appear
+		{
+			0%
+			{
+				scale: 0;
+			}
+			50%
+			{
+				scale: 3px;
+			}
+		}
+	</style>
+	<script>
+		function markCalc()
+		{
+			var t,e,m,s,h,tot,avg;
+			t=document.forms['frm']['t3'].value;
+			e=document.forms['frm']['t4'].value;
+			m=document.forms['frm']['t5'].value;
+			s=document.forms['frm']['t6'].value;
+			h=document.forms['frm']['t7'].value;
+			tot=parseInt(t)+parseInt(e)+parseInt(m)+parseInt(s)+parseInt(h);
+			avg=tot/5;
+			document.forms['frm']['t8'].value=tot;
+			document.forms['frm']['t9'].value=avg;
+			if(tot>=250)
+			{
+				document.forms['frm']['t10'].value='Pass';
+			}
+			else
+			{
+				document.forms['frm']['t10'].value='Fail';
+			}
+			return;
+		}
+	</script>
+</head>
+<body>
+	<form method="get" name="frm">
+		<div id="div1">
+			<div id="h1"><h1>Marks</h1></div>
+			<div id="div5">
+				<label class="t2">Roll Number :</label>
+				<input class="te1" type="number"  placeholder="" name="t1">
+				<label class="t2"> Name :</label>
+				<input class="te1" type="text"  placeholder=""  name="t2">
+			</div>
+			<div id="div2">
+				<div class="e2" >
+					<label class="t2">Mark 1 :</label>
+					<input class="te1" type="number"  placeholder="" name="t3">
+				</div>
+				<div class="e2">	
+					<label class="t2">Mark 2 :</label>
+					<input class="te1" type="number"  placeholder="" name="t4" >
+				</div>
+				<div class="e2">	
+					<label class="t2">Mark 3 :</label>
+					<input class="te1" type="number"  placeholder="" name="t5" >
+				</div>
+				<div class="e2">	
+					<label class="t2" >Mark 4 :</label>
+					<input class="te1" type="number"  placeholder=""  name="t6">
+				</div>
+				<div class="e2">	
+					<label class="t2" >Mark 5 :</label>
+					<input class="te1" type="number"  placeholder=""  name="t7">
+				</div>
+			</div>
+			<div id="div4">
+				<label class="t3"> Total :</label>
+				<input class="t1" type="number"  placeholder="" name="t8">
+
+				<label class="t3"> Average :</label>
+				<input class="t1" type="number"  placeholder="" name="t9">
+
+				<label class="t3"> Result:</label>
+				<input class="t1"type="text"  placeholder="" name="t10" readonly>
+			</div>
+			<div class="buttons">
+				<button class="button" type="reset">New</button>
+				<input type="button" class="button" value="Calc" onclick="markCalc();">
+				<input type="button" class="button" value="Exit" onclick="window.close();">
+				<input type="button" name="" value="View" class="button">
+				<input type="button" name="" value="Save" class="button">
+				<input type="button" name="" value="Repot" class="button">
+			</div>
+		</div>
+	</form>
+</body>
+</html>
