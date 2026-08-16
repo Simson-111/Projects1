@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Dom Program</title>
+</head>
+<body>
+<div id="par">
+<button id="chi">Click me</button>
+<input type="checkbox" name="c1" id="chk1">Click
+</div>	
+
+<script>
+
+var clp=document.getElementById('par');
+clp.addEventListener("click",()=>{
+console.log("hi");
+});	
+
+var clp1=document.getElementById('chi');
+clp1.addEventListener("click",()=>{
+console.log("hi welcome");
+});	
+
+var clp2=document.getElementById('chk1');
+clp2.addEventListener("click",()=>{
+console.log("hi welcome Check Box");
+});	
+
+</script>
+</body>
+</html>
